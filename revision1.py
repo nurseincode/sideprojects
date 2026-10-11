@@ -27,9 +27,6 @@ while restaurant_open:
         else:
             print('Enter yes/no:') # Inner loop repeats automatically
 
-    if not restaurant_open: # if the restaurant is closed, exit the outer loop too
-            break
-
 
 
 # if, elif, else
