@@ -1,35 +1,35 @@
 
 # control structures: simple food ordering app
-restaurant_open = True
+# restaurant_open = True
 
-# Outer loop: keep the ordering process running while the restaurant is open
-while restaurant_open:
-    payment = input('Did the payment succeed? (yes/no:)')
+# # Outer loop: keep the ordering process running while the restaurant is open
+# while restaurant_open:
+#     payment = input('Did the payment succeed? (yes/no:)')
 
-    if payment == 'yes':
-        print('order successful, preparing your order')
+#     if payment == 'yes':
+#         print('order successful, preparing your order')
 
-# If the payment was anything other than 'yes'
-    else: 
-        print('payment failed')
-
-
-    while True: # Inner loop: keep asking about the restaurant until we get a valid ans yes/no
-        open_status = input('is the restaurant open? (yes/no):')
-
-        if open_status == 'no':
-            print('restaurant closed, bye')
-            restaurant_open = False # Change the variable to False so the outer loop can stop
-            break # Exit the inner loop
-        elif open_status == 'yes':
-            print('Retrying order')
-            break # Exit the inner loop and return to the outer loop
-        else:
-            print('Enter yes/no:') # Inner loop repeats automatically
+# # If the payment was anything other than 'yes'
+#     else: 
+#         print('payment failed')
 
 
+#     while True: # Inner loop: keep asking about the restaurant until we get a valid ans yes/no
+#         open_status = input('is the restaurant open? (yes/no):')
 
-# if, elif, else
+#         if open_status == 'no':
+#             print('restaurant closed, bye')
+#             restaurant_open = False # Change the variable to False so the outer loop can stop
+#             break # Exit the inner loop
+#         elif open_status == 'yes':
+#             print('Retrying order')
+#             break # Exit the inner loop and return to the outer loop
+#         else:
+#             print('Enter yes/no:') # Inner loop repeats automatically
+
+# Conditional statements
+
+# 1. if, elif, else
 
 # score= 85
 
@@ -63,9 +63,15 @@ while restaurant_open:
 #         print('Not a correct day of the week!')
 
 
+# 2. Repetition structures(loops)
 
+for i in range(3):
+    print(f'iteration {i}')
 
-
+count = 0
+while count <3:
+    print(f'count is {count}')
+    count +=1
 
 
 
