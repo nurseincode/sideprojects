@@ -27,9 +27,8 @@
 #         else:
 #             print('Enter yes/no:') # Inner loop repeats automatically
 
-# Conditional statements
-
-# 1. if, elif, else
+# Control flow statements
+# Conditional statements  # 1. if, elif, else
 
 # score= 85
 
@@ -65,13 +64,31 @@
 
 # 2. Repetition structures(loops)
 
-for i in range(3):
-    print(f'iteration {i}')
+# for i in range(3):
+#     print(f'iteration {i}')
 
-count = 0
-while count <3:
-    print(f'count is {count}')
-    count +=1
+# count = 0
+# while count <3:
+#     print(f'count is {count}')
+#     count +=1
+
+# Getting an index from a list
+names = ['Ann', 'Tom', 'Yu']
+for i in range(len(names)):
+    print(i, names[i])
+
+for i, name in enumerate(names):
+    print(i, name)
+
+# 3. Control modifiers # break, continue, pass
+
+for num in range(1, 6):
+    if num == 3:
+        continue
+    if num == 5:
+        break
+    print(num)
+
 
 
 
