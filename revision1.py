@@ -73,21 +73,21 @@
 #     count +=1
 
 # Getting an index from a list
-names = ['Ann', 'Tom', 'Yu']
-for i in range(len(names)):
-    print(i, names[i])
+# names = ['Ann', 'Tom', 'Yu']
+# for i in range(len(names)):
+#     print(i, names[i])
 
-for i, name in enumerate(names):
-    print(i, name)
+# for i, name in enumerate(names):
+#     print(i, name)
 
-# 3. Control modifiers # break, continue, pass
+# # 3. Control modifiers # break, continue, pass
 
-for num in range(1, 6):
-    if num == 3:
-        continue
-    if num == 5:
-        break
-    print(num)
+# for num in range(1, 6):
+#     if num == 3:
+#         continue
+#     if num == 5:
+#         break
+#     print(num)
 
 
 
@@ -115,3 +115,10 @@ for num in range(1, 6):
 # my_car.accelerate(20)
 # print(my_car.speed)
     
+
+
+name = 'Mary'
+age = 10
+
+print(f'My name is {name} and I am {age} years old.')
+
