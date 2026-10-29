@@ -112,13 +112,57 @@
 # print(my_car.brand)
 # print(my_car.speed)
 
+
+# Call the object's METHOD (an action)
+# The method changes the data stored in the object
+
 # my_car.accelerate(20)
 # print(my_car.speed)
     
 
 
-name = 'Mary'
-age = 10
+# name = 'Mary'
+# age = 10
 
-print(f'My name is {name} and I am {age} years old.')
+# print(f'My name is {name} and I am {age} years old.')
+
+
+# x = 10
+# if  x == 10:
+#     print("Hello")
+
+# fruits = ['apple', 'banana', 'guava']
+
+# Refactor with enumerate function
+# for fruit in enumerate(fruits):
+#     print(fruit)
+
+# fruits = ['apple', 'guava', 'cherry']
+# i = 0
+
+# for fruit in fruits:
+#     print(i, fruit)
+#     i += 1
+
+# for i in range(5):
+#     print('Hello')
+
+# for i in range(0, 7):
+#     if i % 2 == 0:
+#         print(f'{i} is even')
+#     else:
+#         print(f'{i} is odd')
+
+# Refactor with a ternary expression
+
+for i in range(0, 7):
+#     print(f"{i} is {'even' if i % 2 == 0 else 'odd'}")
+# refine further with ternary expression
+      print(f"{i} is {'odd' if i % 2 else 'even'}")
+
+
+
+
+
+
 
