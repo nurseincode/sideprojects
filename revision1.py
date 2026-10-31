@@ -224,23 +224,66 @@
 
 # # Passing one function's result as an argument to another function
 
-def add_numbers():
-    return 10 + 10
+# def add_numbers():
+#     return 10 + 10
 
-def multiply_numbers(number):
-    return number * 5
+# def multiply_numbers(number):
+#     return number * 5
 
-result = multiply_numbers(add_numbers())
-print(result)
+# result = multiply_numbers(add_numbers())
+# print(result)
 
 
-def add_numbers(a, b):
-    return a + b
+# def add_numbers(a, b):
+#     return a + b
 
-def multiply_numbers(number, multiplier):
-    return number * multiplier
+# def multiply_numbers(number, multiplier):
+#     return number * multiplier
 
-print(multiply_numbers(add_numbers(10, 10), 10)) # becomes multiply_numbers(20, 5)
+# print(multiply_numbers(add_numbers(10, 10), 10)) # becomes multiply_numbers(20, 5)
+
+
+# Hardcoded values vs flexible functions
+
+# def add_numbers():
+#     return 10 + 10 # will always add 10 + 10
+
+# def multiply_numbers(number):
+#     return number * 5 # The multiplier will always be 5
+
+# result = multiply_numbers(add_numbers())
+# print(result)
+
+# print(multiply_numbers(10))
+# print(multiply_numbers(15))
+
+# Second approach: Passing arguments into functions
+
+# def add_numbers(a, b):
+#     return a + b
+
+# def multiply_numbers(number, multiplier):
+#     return number * multiplier
+
+# print(multiply_numbers(add_numbers(10, 10), 5))
+# print(multiply_numbers(add_numbers(5, 5), 20))
+
+# Optimization
+
+# def add(num1, num2):
+#     sum = num1 + num2
+#     return sum
+
+# first_result = add(10, 10)
+# print(first_result)
+# total = add(first_result, 20)
+# print(total)
+
+# Same - nested function call
+# def add(num1, num2):
+#     return num1 + num2
+
+# total = print(add(add(10, 10), 20))
 
 
 # Nested function
@@ -255,8 +298,17 @@ print(multiply_numbers(add_numbers(10, 10), 10)) # becomes multiply_numbers(20, 
 # outer_function()
 # print(outer_function())
 
+def outer_function():
+    def inner_function():
+        return 100
+
+    return inner_function()
+
+print(outer_function())
 
 
+# Advanced Functions
+# 1. Callbacks
 
 
 
