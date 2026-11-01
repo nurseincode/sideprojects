@@ -298,17 +298,28 @@
 # outer_function()
 # print(outer_function())
 
-def outer_function():
-    def inner_function():
-        return 100
+# def outer_function():
+#     def inner_function():
+#         return 100
 
-    return inner_function()
+#     return inner_function()
 
-print(outer_function())
+# print(outer_function())
 
 
 # Advanced Functions
 # 1. Callbacks
+
+def my_callback(text):
+    print('Callback says:' , text)
+
+def process_data(callback_func):
+    print('Processing task...')
+    callback_func('Hello from inside!')
+
+# Pass the function as an argument
+
+process_data(my_callback)
 
 
 
