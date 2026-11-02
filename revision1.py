@@ -310,16 +310,46 @@
 # Advanced Functions
 # 1. Callbacks
 
-def my_callback(text):
-    print('Callback says:' , text)
+# def my_callback(text):
+#     print('Callback says:' , text)
 
-def process_data(callback_func):
-    print('Processing task...')
-    callback_func('Hello from inside!')
+# def process_data(callback_func):
+#     print('Processing task...')
+#     callback_func('Hello from inside!')
 
-# Pass the function as an argument
+# process_data(my_callback) # Pass the function as an argument
 
-process_data(my_callback)
+# callback_func = my_callback
+# print(callback_func)
+# print(my_callback)
+
+
+
+# def process_data(data, callback):
+#     print(f'Processing: {data}')
+#     callback() # Executing the code passed as an argument
+
+# def notify():
+#     print('Task completed successfully!')
+
+# # 'notify' plays the role of a callback
+# process_data('User_Profile_10', notify)
+
+def notify_customer(message): # cb function
+    print('CUSTOMER NOTIFICATION:', message)
+
+def order_pizza(callback): # function processes the pizza order
+    print('Pizza order received!')
+
+    print('Preparing your pizza...')
+
+    print('Pizza is ready!')
+
+    # Call the cb function
+    callback('Your pizza is ready for collection!')
+
+# Pass the notification function into order_pizza
+order_pizza(notify_customer)
 
 
 
