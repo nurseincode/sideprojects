@@ -1,3 +1,6 @@
+import time
+import asyncio
+
 
 # control structures: simple food ordering app
 # restaurant_open = True
@@ -335,21 +338,25 @@
 # # 'notify' plays the role of a callback
 # process_data('User_Profile_10', notify)
 
-def notify_customer(message): # cb function
-    print('CUSTOMER NOTIFICATION:', message)
+# def notify_customer(message): # cb function
+#     print('CUSTOMER NOTIFICATION:', message)
 
-def order_pizza(callback): # function processes the pizza order
-    print('Pizza order received!')
+# def order_pizza(notify_customer): # function processes the pizza order
+#     print('Pizza order received!')
 
-    print('Preparing your pizza...')
+#     print('Preparing your pizza...')
 
-    print('Pizza is ready!')
+#     print('Pizza is ready!')
 
-    # Call the cb function
-    callback('Your pizza is ready for collection!')
+#     # Call the cb function
+#     notify_customer('Your pizza is ready for collection!')
 
-# Pass the notification function into order_pizza
-order_pizza(notify_customer)
+# # Pass the notification function into order_pizza
+# order_pizza(notify_customer)
+
+
+# Asynchronous programming # Processing three orders
+
 
 
 
