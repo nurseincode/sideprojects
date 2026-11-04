@@ -356,6 +356,40 @@ import asyncio
 
 
 # Asynchronous programming # Processing three orders
+# async def process_order(order_id):
+#     print(f'Starting order {order_id}')
+
+#     # Simulate waiting for an external service
+#     await asyncio.sleep(3)
+#     print(f'Finished order {order_id}')
+
+# async def main():
+#         start = time.time()
+
+#         # Start all 3 orders concurrently
+#         await asyncio.gather(
+#             process_order(1),
+#             process_order(2),
+#             process_order(3)
+#         )
+
+#         end = time.time()
+
+#         print(f'Total time: {end - start:.2f} seconds')
+
+# asyncio.run(main())
+
+# Lambda function
+
+def add(x, y): #Regular function
+      return x + y
+
+print(add(10, 10))
+
+# Equivalent lambda function
+
+add_lambda = lambda x, y: x + y
+print(add_lambda(10, 10))
 
 
 
