@@ -328,31 +328,31 @@ import asyncio
 
 
 
-# def process_data(data, callback):
-#     print(f'Processing: {data}')
-#     callback() # Executing the code passed as an argument
+def process_data(data, callback):
+    print(f'Processing: {data}')
+    callback() # Executing the code passed as an argument
 
-# def notify():
-#     print('Task completed successfully!')
+def notify():
+    print('Task completed successfully!')
 
-# # 'notify' plays the role of a callback
-# process_data('User_Profile_10', notify)
+# 'notify' plays the role of a callback
+process_data('User_Profile_10', notify)
 
-# def notify_customer(message): # cb function
-#     print('CUSTOMER NOTIFICATION:', message)
+def notify_customer(message): # cb function
+    print('CUSTOMER NOTIFICATION:', message)
 
-# def order_pizza(notify_customer): # function processes the pizza order
-#     print('Pizza order received!')
+def order_pizza(notify_customer): # function processes the pizza order
+    print('Pizza order received!')
 
-#     print('Preparing your pizza...')
+    print('Preparing your pizza...')
 
-#     print('Pizza is ready!')
+    print('Pizza is ready!')
 
-#     # Call the cb function
-#     notify_customer('Your pizza is ready for collection!')
+    # Call the cb function
+    notify_customer('Your pizza is ready for collection!')
 
-# # Pass the notification function into order_pizza
-# order_pizza(notify_customer)
+# Pass the notification function into order_pizza
+order_pizza(notify_customer)
 
 
 # Asynchronous programming # Processing three orders
@@ -381,15 +381,28 @@ import asyncio
 
 # Lambda function
 
-def add(x, y): #Regular function
-      return x + y
+# def add(x, y): #Regular function
+#       return x + y
 
-print(add(10, 10))
+# print(add(10, 10))
 
-# Equivalent lambda function
+# # Equivalent lambda function
 
-add_lambda = lambda x, y: x + y
-print(add_lambda(10, 10))
+# add_lambda = lambda x, y: x + y
+# print(add_lambda(10, 10))
+
+# students = [
+#     {'name': 'Tim', 'age': 23},
+#     {'name': 'Lucy', 'age': 19},
+#     {'name': 'Dee', 'age': 18}
+# ]
+
+# # Sort students by age
+# students.sort(key=lambda student:student['age'])
+# print(students)
+
+
+
 
 
 
