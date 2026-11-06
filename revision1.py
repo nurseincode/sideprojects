@@ -328,31 +328,74 @@ import asyncio
 
 
 
-def process_data(data, callback):
-    print(f'Processing: {data}')
-    callback() # Executing the code passed as an argument
+# def process_data(data, callback):
+#     print(f'Processing: {data}')
+#     callback() # Executing the code passed as an argument
 
+# def notify():
+#     print('Task completed successfully!')
+
+# # 'notify' plays the role of a callback
+# process_data('User_Profile_10', notify)
+
+# def notify_customer(message): # cb function
+#     print('CUSTOMER NOTIFICATION:', message)
+
+# def order_pizza(notify_customer): # function processes the pizza order
+#     print('Pizza order received!')
+
+#     print('Preparing your pizza...')
+
+#     print('Pizza is ready!')
+
+#     # Call the cb function
+#     notify_customer('Your pizza is ready for collection!')
+
+# # Pass the notification function into order_pizza
+# order_pizza(notify_customer)
+
+# def notify():
+#     print('Task completed!')
+
+# def process_data(callback):
+#     print('Processing data...')
+#     callback()
+
+# process_data(notify) # notify is the only callback.
+
+# Multiple callback functions
 def notify():
-    print('Task completed successfully!')
+    print('Task completed!')
 
-# 'notify' plays the role of a callback
-process_data('User_Profile_10', notify)
+def send_email():
+    print('Email sent!')
 
-def notify_customer(message): # cb function
-    print('CUSTOMER NOTIFICATION:', message)
+def send_sms():
+    print('SMS sent!')
 
-def order_pizza(notify_customer): # function processes the pizza order
-    print('Pizza order received!')
+def process_data(callback):
+    print('Processing data...')
+    callback()
 
-    print('Preparing your pizza...')
+# Each time process_data() is called, a different callback is passed to it.
+process_data(notify)
+process_data(send_email)
+process_data(send_sms)
 
-    print('Pizza is ready!')
+# Multiple callbacks in ONE function
+def notify():
+    print('Task completed!')
 
-    # Call the cb function
-    notify_customer('Your pizza is ready for collection!')
+def send_email():
+    print('Email sent!')
 
-# Pass the notification function into order_pizza
-order_pizza(notify_customer)
+def process_data(callback1, callback2):
+    print('Processing data...')
+
+    callback1()
+    callback2()
+
+process_data(notify, send_email)
 
 
 # Asynchronous programming # Processing three orders
