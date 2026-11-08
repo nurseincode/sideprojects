@@ -364,38 +364,40 @@ import asyncio
 # process_data(notify) # notify is the only callback.
 
 # Multiple callback functions
-def notify():
-    print('Task completed!')
+# def notify():
+#     print('Task completed!')
 
-def send_email():
-    print('Email sent!')
+# def send_email():
+#     print('Email sent!')
 
-def send_sms():
-    print('SMS sent!')
+# def send_sms():
+#     print('SMS sent!')
 
-def process_data(callback):
-    print('Processing data...')
-    callback()
+# def process_data(callback):
+#     print('Processing data...')
+#     callback()
 
 # Each time process_data() is called, a different callback is passed to it.
-process_data(notify)
-process_data(send_email)
-process_data(send_sms)
+# process_data(notify)
+# process_data(send_email)
+# process_data(send_sms)
 
 # Multiple callbacks in ONE function
-def notify():
-    print('Task completed!')
+# def notify():
+#     print('Task completed!')
 
-def send_email():
-    print('Email sent!')
+# def send_email():
+#     print('Email sent!')
 
-def process_data(callback1, callback2):
-    print('Processing data...')
+# def process_data(callback1, callback2):
+#     print('Processing data...')
 
-    callback1()
-    callback2()
+#     callback1()
+#     callback2()
 
-process_data(notify, send_email)
+# process_data(notify, send_email)
+
+
 
 
 # Asynchronous programming # Processing three orders
@@ -444,7 +446,45 @@ process_data(notify, send_email)
 # students.sort(key=lambda student:student['age'])
 # print(students)
 
+# HOFs
+numbers = [1, 2, 3, 4]
+def double(x):
+   return x * 2
+result = map(double, numbers) # map is a hof bc it takes another func as an argument
+print(list(result))
 
+
+# Same result using a for loop without map
+numbers = [2, 4, 6, 8]
+
+def double(x):
+   return x * 2
+
+result = []
+
+for number in numbers:
+   result.append(double(number))
+
+print(result)
+
+# HOF Part(at least one of these two things) one - takes another function as an argument
+def greet(name):
+    return "Hello " + name
+
+def process_user(callback):
+    return callback("Alex")
+
+print(process_user(greet))
+
+# HOF two - Returns another function as its result # Closure
+def multiplier(x):
+   def multiply(y):
+      return x * y
+   return multiply
+double = multiplier(2)
+print(double(5))
+
+   
 
 
 
