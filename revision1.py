@@ -1,6 +1,19 @@
 import time
 import asyncio
 
+# Everything is an object: examples # Integers are objects
+# number = 10
+
+# print(type(number))
+# print(number.bit_length()) # == <class 'int'> 4
+
+# # Strings are objects
+
+# name = "python"
+
+# print(type(name))
+# print(name.upper())
+# print(name.capitalize()) # == <class 'str'> PYTHON > Python
 
 # control structures: simple food ordering app
 # restaurant_open = True
