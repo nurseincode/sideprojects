@@ -460,43 +460,62 @@ import asyncio
 # print(students)
 
 # HOFs
-numbers = [1, 2, 3, 4]
-def double(x):
-   return x * 2
-result = map(double, numbers) # map is a hof bc it takes another func as an argument
-print(list(result))
+# numbers = [1, 2, 3, 4]
+# def double(x):
+#    return x * 2
+# result = map(double, numbers) # map is a hof bc it takes another func as an argument
+# print(list(result))
 
 
-# Same result using a for loop without map
-numbers = [2, 4, 6, 8]
+# # Same result using a for loop without map
+# numbers = [2, 4, 6, 8]
 
-def double(x):
-   return x * 2
+# def double(x):
+#    return x * 2
 
-result = []
+# result = []
 
-for number in numbers:
-   result.append(double(number))
+# for number in numbers:
+#    result.append(double(number))
 
-print(result)
+# print(result)
 
-# HOF Part(at least one of these two things) one - takes another function as an argument
-def greet(name):
-    return "Hello " + name
+# # HOF Part(at least one of these two things) one - takes another function as an argument
+# def greet(name):
+#     return "Hello " + name
 
-def process_user(callback):
-    return callback("Alex")
+# def process_user(callback):
+#     return callback("Alex")
 
-print(process_user(greet))
+# print(process_user(greet))
 
-# HOF two - Returns another function as its result # Closure
-def multiplier(x):
-   def multiply(y):
-      return x * y
-   return multiply
-double = multiplier(2)
-print(double(5))
+# # HOF two - Returns another function as its result # Closure
+# def multiplier(x):
+#    def multiply(y):
+#       return x * y
+#    return multiply
+# double = multiplier(2)
+# print(double(5))
 
+   # HOF part two coffee shop discounts
+def create_discount(discount_percentage):
+
+    def apply_discount(price):
+        discount_amount = price * discount_percentage
+        final_price = price - discount_amount
+        return final_price
+
+    return apply_discount
+
+
+regular_discount = create_discount(0.10)
+vip_discount = create_discount(0.20)
+staff_discount = create_discount(0.50)
+
+
+print("Regular customer:", regular_discount(100))
+print("VIP customer:", vip_discount(100))
+print("Staff customer:", staff_discount(100))
    
 
 
